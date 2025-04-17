@@ -14,7 +14,7 @@ The goal is to tackle these challenges regularly (aiming for daily practice!) to
 
 You can view the Katas presented in a styled, portfolio-like format on Netlify:
 
-**➡️ https://katas-dellabella.netlify.app/](https://katas-dellabella.netlify.app/)](https://katas-dellabella.netlify.app/ ⬅️**
+**➡️ https://katas-dellabella.netlify.app/ ⬅️**
 
 *(This site showcases the Kata solutions implemented within simple HTML and CSS card layouts.)*
 
