@@ -1,5 +1,5 @@
 // data.js
-export const portfolioData = [
+const portfolioData  =[
     // --- Katas ---
     {
         category: 'katas-conditionals', // mainCategory-subCategory

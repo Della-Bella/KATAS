@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Learning Journey</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Optional: Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,43 +19,47 @@
 
     <nav class="main-nav">
         <ul>
-            <!-- KATAS-->
+            <!-- KATAS Menu Item -->
             <li class="nav-item has-dropdown">
-                <a href="#" class="nav-link category-type" data-category="katas">Katas</a>
+                <a href="#" class="nav-link category-trigger" data-category="katas">Katas</a>
                 <ul class="dropdown-menu">
-                   
+                    <!-- Populated by JS -->
                 </ul>
             </li>
 
-            <!-- PROJECTS Menu  -->
+            <!-- PROJECTS Menu Item -->
             <li class="nav-item has-dropdown">
-                <a href="#" class="nav-link category-type" data-category="projects">Projects</a>
+                <a href="#" class="nav-link category-trigger" data-category="projects">Projects</a>
                 <ul class="dropdown-menu">
-                    
+                     <!-- Populated by JS -->
                 </ul>
             </li>
 
-            <!-- COURSES -->
+            <!-- COURSES Menu Item -->
             <li class="nav-item has-dropdown">
-                <a href="#" class="nav-link category-type" data-category="courses">Courses</a>
+                <a href="#" class="nav-link category-trigger" data-category="courses">Courses</a>
                  <ul class="dropdown-menu">
+                     <!-- Populated by JS -->
                 </ul>
             </li>
 
-            <!-- BIO -->
+            <!-- BIO Menu Item (No dropdown) -->
             <li class="nav-item">
-                <a href="#" class="nav-link category-type" data-category="bio">Bio</a>
+                <a href="#" class="nav-link category-trigger" data-category="bio">Bio</a>
             </li>
         </ul>
     </nav>
 
     <main class="content-area">
         <div id="cards-container" class="cards-grid">
-            <!-- Cards show here -->
+            <!-- Cards will be loaded here by JavaScript -->
             <p class="placeholder-text">Select a category from the menu to see items.</p>
         </div>
     </main>
 
-   <script type="module" src="script.js"></script>
+    <!-- IMPORTANT: Link data.js FIRST, then script.js -->
+  <script src="data.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
