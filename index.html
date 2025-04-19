@@ -1,155 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>JS Kata Portfolio</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-         rel="stylesheet"
-      />
-      <link rel="stylesheet" href="style.css" />
-   </head>
-   <body>
-      <header class="main-header">
-         <h1>My JavaScript Kata Practice</h1>
-         <p>Showcasing fundamental concepts through practice exercises.</p>
-      </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-      <div class="kata-container">
-         <!-- Card 1: Even or Odd -->
-         <div class="kata-card">
-            <h2 class="kata-method">
-               Conditional Statements (if/else) & Modulo (%)
-            </h2>
-            <pre><code class="language-javascript">
-function evenOrOdd(number) {
-  if (number % 2 === 0){
-    return "Even";
-  } else {
-        return "Odd";  
-      }
-}
-console.log(evenOrOdd(10)); // Output: Even
-console.log(evenOrOdd(7));  // Output: Odd
-            </code></pre>
-            <p class="kata-explanation">
-               Modulo Operator % = remainder.<br />
-               IF <strong>number % 2 === Remainder 0 </strong> = return Even
-               (PAR)<br />
-               } ELSE { <br />
-               return= "Odd" (IMPAR) }
-               <br />Use "if/else" statement returns the string "Even" or "Odd".
-            </p>
-         </div>
+    <header class="main-header">
+        <h1>My Learning Path</h1>
+        <p>Documenting my progress through Katas, Projects, and Courses.</p>
+    </header>
 
-         <!-- Card 2: (Add another Kata here) -->
-         <div class="kata-card">
-            <h2 class="kata-method">Return Negative (if & else)</h2>
-            <pre><code class="language-javascript">
-function makeNegative(num) {
-  if (num < 0) {
-    return num
-  } else{
-   return -num
-  }
-}
-            </code></pre>
-            <p class="kata-explanation">
-               To check if a number is negative in JavaScript= compare it to
-               zero using the less than operator (<).
-            </p>
-         </div>
+    <nav class="main-nav">
+        <ul>
+            <!-- KATAS-->
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link category-type" data-category="katas">Katas</a>
+                <ul class="dropdown-menu">
+                   
+                </ul>
+            </li>
 
-         <!-- Card 3: (Add another Kata here) -->
-         <div class="kata-card">
-            <h2 class="kata-method">
-               Convert boolean values to strings 'Yes' or 'No' (if & else).
-            </h2>
-            <pre><code class="language-javascript">
-function boolToWord( bool ){
-if ( bool === true){
-  return "Yes"
-  } else{
-    return "No"
-  }
-}
-            </code></pre>
-            <p class="kata-explanation">
-               if bolean value is true return "Yes" if bolean value is "False"
-               returns "No""
-            </p>
-         </div>
+            <!-- PROJECTS Menu  -->
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link category-type" data-category="projects">Projects</a>
+                <ul class="dropdown-menu">
+                    
+                </ul>
+            </li>
 
-         <!-- Card 4: (Add another Kata here) -->
-         <div class="kata-card">
-            <h2 class="kata-method">
-               Is n divisible by x and y?<br />
-               modulo operator (%) twice within a conditional check,<br />
-               combined with the &&
-            </h2>
-            <pre><code class="language-javascript">
-function isDivisible(n, x, y) {
-  if ( (n % x === 0) && (n % y === 0)){
-     return true;
-  } else {
-    return false;
-  }
-}
-            </code></pre>
-            <p class="kata-explanation">
-               Modulo operator (%). The modulo operator gives you the remainder
-               of a division.<br />
-               If a number n is perfectly divisible by x, the remainder n % x
-               will be === 0 "True"
-            </p>
-         </div>
+            <!-- COURSES -->
+            <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link category-type" data-category="courses">Courses</a>
+                 <ul class="dropdown-menu">
+                </ul>
+            </li>
 
-         <!-- Card 5: Car Rent disconts Daly-->
-         <div class="kata-card">
-            <h2 class="kata-method">Car Rent disconts Daly (if, else if )</h2>
-            <pre><code class="language-javascript">
-function rentalCarCost(d) {
-  
-  if (d >= 7) {
-    return 40 * d - 50; 
-  }
-  
-  else if (d >= 3) {
-    return 40 * d - 20; 
-  }
- 
-  else {
-    return 40 * d;     
-  }
-}
-console.log("Cost for 1 day:", rentalCarCost(1));   
-console.log("Cost for 2 days:", rentalCarCost(2));  
-            </code></pre>
-            <p class="kata-explanation">
-               Base cost is $40 per day Used if, else if, and else for different
-               conditions.
-            </p>
-         </div>
+            <!-- BIO -->
+            <li class="nav-item">
+                <a href="#" class="nav-link category-type" data-category="bio">Bio</a>
+            </li>
+        </ul>
+    </nav>
 
+    <main class="content-area">
+        <div id="cards-container" class="cards-grid">
+            <!-- Cards show here -->
+            <p class="placeholder-text">Select a category from the menu to see items.</p>
+        </div>
+    </main>
 
-         <!-- Card  -->
-       <div class="kata-card">
-            <h2 class="kata-method">title</h2>
-            <pre><code class="language-javascript">
-function
-</code></pre>
-            <p class="kata-explanation">
-               Explanation
-            </p>
-         </div>
-
-
-
-
-         <!-- Add more cards as needed -->
-      </div>
-   </body>
+   <script type="module" src="script.js"></script>
+</body>
 </html>

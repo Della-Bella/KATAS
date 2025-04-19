@@ -1,3 +1,4 @@
+/* --- Base Styles --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,128 +7,216 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #b8b8b8;
-    color: #333;
     line-height: 1.6;
-    padding: 30px 20px;
-
+    background-color: #f8f9fa;
+    /* Light grey background */
+    color: #343a40;
+    /* Dark grey text */
 }
 
+a {
+    color: #007bff;
+    /* Standard link blue */
+    text-decoration: none;
+}
 
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* --- Header --- */
 .main-header {
+    background-color: #343a40;
+    /* Dark background */
+    color: #ffffff;
+    /* White text */
+    padding: 30px 20px;
     text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
 }
 
 .main-header h1 {
-    font-weight: 600;
-    color: #2c3e50;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
 .main-header p {
-    color: #7f8c8d;
+    font-weight: 300;
+    color: #ced4da;
+    /* Lighter grey for subtitle */
+}
 
-    font-size: 1rem;
+/* --- Navigation --- */
+.main-nav {
+    background-color: #ffffff;
+    /* White nav background */
+    border-bottom: 1px solid #e9ecef;
+    /* Light border */
+    margin-bottom: 30px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* Center main menu items */
+    padding: 0;
+}
+
+.main-nav .nav-item {
+    position: relative;
+    /* Needed for absolute positioning of dropdown */
+}
+
+.main-nav .nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #495057;
+    /* Grey nav links */
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-item:hover>.nav-link {
+    /* Highlight on hover */
+    background-color: #e9ecef;
+    /* Light grey hover */
+    color: #0056b3;
+}
+
+/* --- Dropdown Menu --- */
+.dropdown-menu {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    /* Position below the parent nav item */
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    /* Minimum width */
+    z-index: 1000;
+    /* Ensure it's above other content */
+    padding: 5px 0;
+    border-radius: 0 0 4px 4px;
+    /* Rounded bottom corners */
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu .dropdown-item {
+    display: block;
+    padding: 8px 20px;
+    color: #495057;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    /* Prevent wrapping */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+/* Show dropdown - Class added by JavaScript */
+.nav-item .dropdown-menu.show {
+    display: block;
 }
 
 
-/* Kata Container - The Grid */
-.kata-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    max-width: 1600px;
+/* --- Content Area & Cards --- */
+.content-area {
+    max-width: 1200px;
+    /* Limit content width */
     margin: 0 auto;
+    /* Center content */
+    padding: 0 20px;
+    /* Padding on the sides */
 }
 
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Responsive grid */
+    gap: 25px;
+    /* Space between cards */
+}
 
-.kata-card {
+.card {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* Stack content vertically */
 }
 
-/* Card Hover Effect */
-.kata-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* Method Name Styling */
-.kata-method {
+.card-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #34495e;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ecf0f1;
-    padding-bottom: 10px;
+    color: #343a40;
+    margin-bottom: 10px;
 }
 
-/* Code Block Styling (<pre> and <code>) */
-.kata-card pre {
-    background-color: #f1ecec;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
-    overflow-x: auto;
-    font-size: 0.85rem;
-    flex-grow: 1;
-    min-height: 100px;
-}
-
-.kata-card code {
-    font-family: 'Courier New', Courier, monospace;
-    color: #2c3e50;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
-/* Explanation */
-.kata-explanation {
+.card-description {
     font-size: 0.95rem;
-    color: #f45a5a;
-    flex-shrink: 0;
+    color: #6c757d;
+    /* Muted text color */
+    flex-grow: 1;
+    /* Allow description to take up space */
+    margin-bottom: 15px;
 }
 
+.card-link {
+    font-weight: 600;
+    display: inline-block;
+    /* Allows padding/margin */
+    margin-top: auto;
+    /* Push link to bottom if card heights vary */
+    padding: 5px 0;
+    align-self: flex-start;
+    /* Align to the left */
+}
 
+.placeholder-text {
+    color: #6c757d;
+    text-align: center;
+    padding: 50px;
+    grid-column: 1 / -1;
+    /* Make it span all columns */
+    font-size: 1.1rem;
+}
+
+/* --- Responsive (Optional Simple Example) --- */
 @media (max-width: 768px) {
-    .kata-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
+    .main-nav ul {
+        flex-direction: column;
+        /* Stack nav items vertically */
+        align-items: center;
+        /* Center them */
     }
 
-    .kata-card {
-        padding: 20px;
-    }
-
-    .main-header h1 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 20px 10px;
-    }
-
-    .kata-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .main-header h1 {
-        font-size: 1.5rem;
-    }
-
-    .main-header p {
-        font-size: 0.9rem;
+    .dropdown-menu {
+        position: static;
+        /* Make dropdown static on mobile */
+        box-shadow: none;
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        width: 100%;
+        text-align: center;
     }
 }
