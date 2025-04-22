@@ -69,28 +69,26 @@ if ( bool === true){
   }
 }`,
         link: 'https://www.codewars.com/kata/53369039d7ab3ac506000467'
-
     },
-    // --- Katas loops ---
+    
+    //loops
     {
-        category: 'katas-loops', // mainCategory-subCategory
+        category: 'katas-loops', 
         title: 'Summation (Loops)',
-        description: 'Sums numbers from 1 to N using a for loop.',
-        link: '#' // Optional link to kata platform
+        description: 'Initialize a totalSum to 0.Use a forEach loop to look at each number in the input array.Inside the loop, use an if statement to check if the number is > 0.If it is positive, add it to the totalSum. After the loop finishes, return the final totalSum.',
+        codeSnippet: `function positiveSum(inputArray) {
+        let totalSum = 0;
+        inputArray.forEach(function (number) {
+            if (number > 0) {
+                totalSum += number;
+            }
+        }
+        'return totalSum;
+   }`,
+
+        link: 'https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript'
     },
-    {
-        category: 'katas-conditionals',
-        title: 'Even or Odd Check ',
-        description: 'Checks if a number is even or odd using the modulo operator and an if/else statement.',
-        codeSnippet: `function evenOrOdd(number) {
-    if (number % 2 === 0) {
-        return "Even";
-    } else {
-        return "Odd";
-    }
-}`,
-        link: '#'
-    },
+   
     
     // --- Katas arrays ---
     {
