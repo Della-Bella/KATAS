@@ -77,14 +77,15 @@ if ( bool === true){
         title: 'Summation (Loops)',
         description: 'Initialize a totalSum to 0.Use a forEach loop to look at each number in the input array.Inside the loop, use an if statement to check if the number is > 0.If it is positive, add it to the totalSum. After the loop finishes, return the final totalSum.',
         codeSnippet: `function positiveSum(inputArray) {
-        let totalSum = 0;
-        inputArray.forEach(function (number) {
-            if (number > 0) {
-                totalSum += number;
-            }
-        }
-        'return totalSum;
-   }`,
+   let totalSum = 0;
+    inputArray.forEach( function(number) {
+        if (number > 0) {
+            totalSum += number;
+    }
+  });
+    return totalSum;
+}
+  }`,
 
         link: 'https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript'
     },
@@ -93,18 +94,47 @@ if ( bool === true){
     // --- Katas arrays ---
     {
         category: 'katas-arrays',
-        title: 'Sum of Positive (Arrays)',
-        description: 'Calculates the sum of only the positive numbers in an array.',
-        codeSnippet: `function positiveSum(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      sum += arr[i];
+        title: 'Get the mean(average) of an array',
+        description: 'Return the average of the given array rounded down to its nearest integer.',
+        codeSnippet: `function getAverage(marks) {
+  let sum = 0; 
+  for (let i = 0; i < marks.length; i++) {
+    sum = sum + marks[i]; 
+  }
+  const count = marks.length; 
+  const average = Math.floor(sum / count);                                    
+  return average;
+}
+`,
+        link: 'https://www.codewars.com/kata/563e320cee5dddcf77000158/train/javascript'
+    },
+
+    {
+        category: 'katas-arrays',
+        title: 'Count of positives / sum of negatives',
+        description: 'checking elements and managing two different results based on the array s contents.',
+        codeSnippet: `function countPositivesSumNegatives(input) {
+ 
+  if (input === null || input.length === 0) {
+    return [];
+  }
+
+  let positiveCount = 0; 
+  let negativeSum = 0;   
+
+  for (let i = 0; i < input.length; i++) {
+    const currentNumber = input[i]; 
+
+    if (currentNumber > 0) {
+      
+      positiveCount++; 
+    } else if (currentNumber < 0) {
+
+      negativeSum += currentNumber; 
     }
   }
-  return sum;
-}`,
-        link: '#'
+`,
+        link: 'https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/javascript'
     },
 
     // --- Projects ---
