@@ -137,6 +137,25 @@ if ( bool === true){
         link: 'https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/javascript'
     },
 
+    {
+        category: 'katas-arrays',
+        title: 'Square(n) Sum',
+        description: ' iterate through the input array, and for each element, calculate its square and add that square to a variable that accumulates the sum. Finally, return the accumulated sum.',
+        codeSnippet: `function squareSum(numbers) {
+  let sum = 0; 
+  for (let i = 0; i < numbers.length; i++) {
+    const currentNumber = numbers[i];
+    const squaredValue = currentNumber * currentNumber;
+  
+    sum = sum + squaredValue;
+
+  }
+  return sum;
+}
+`,
+        link: 'https://www.codewars.com/kata/515e271a311df0350d00000f/train/javascript'
+    },
+
     // --- Projects ---
     {
         category: 'projects-frontend', // main-sub
